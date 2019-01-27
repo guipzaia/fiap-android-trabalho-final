@@ -1,9 +1,10 @@
-package br.com.fiap.trabalhofinalapplication
+package br.com.fiap.trabalhofinalapplication.view
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import br.com.fiap.trabalhofinalapplication.R
 
 class SplashScreenActivity : AppCompatActivity() {
 

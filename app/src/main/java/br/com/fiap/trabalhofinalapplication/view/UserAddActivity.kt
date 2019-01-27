@@ -1,7 +1,8 @@
-package br.com.fiap.trabalhofinalapplication
+package br.com.fiap.trabalhofinalapplication.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import br.com.fiap.trabalhofinalapplication.R
 
 class UserAddActivity : AppCompatActivity() {
 
