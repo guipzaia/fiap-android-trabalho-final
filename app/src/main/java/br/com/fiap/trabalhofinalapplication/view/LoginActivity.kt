@@ -7,9 +7,9 @@ import android.os.Handler
 import android.widget.Toast
 import br.com.fiap.trabalhofinalapplication.APIClient
 import br.com.fiap.trabalhofinalapplication.R
-import br.com.fiap.trabalhofinalapplication.evaluation.api.v1.OAuthAPI
-import br.com.fiap.trabalhofinalapplication.evaluation.model.oauth.v1.LoginRequest
-import br.com.fiap.trabalhofinalapplication.evaluation.model.oauth.v1.LoginResponse
+import br.com.fiap.trabalhofinalapplication.evaluation.api.v1.OAuthApi
+import br.com.fiap.trabalhofinalapplication.evaluation.contracts.oauth.v1.LoginRequest
+import br.com.fiap.trabalhofinalapplication.evaluation.contracts.oauth.v1.LoginResponse
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,15 +17,13 @@ import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
-    var oAuthApi: OAuthAPI? = null
+    var oAuthApi: OAuthApi? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
-
-        oAuthApi = APIClient.client?.create(OAuthAPI::class.java)
+        oAuthApi = APIClient.client?.create(OAuthApi::class.java)
 
         loginButton.setOnClickListener {
 
