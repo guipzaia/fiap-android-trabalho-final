@@ -11,6 +11,10 @@ import android.view.MenuItem
 import br.com.fiap.trabalhofinalapplication.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import android.content.Intent
+import kotlinx.android.synthetic.main.user_add_fragment.*
+import java.util.*
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -18,11 +22,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar,
@@ -61,10 +60,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+        var fragmentClass: Any? = null
+
         when (item.itemId) {
 
             R.id.nav_user_add -> {
-//                menuInflater.inflate(R.menu.activity_main_drawer, UserAddActivity::class.java)
+                var fragment = supportFragmentManager.beginTransaction()
+                fragment.replace(R.id.frameLayout, UserAddFragment())
+                fragment.commit()
             }
 
 //            R.id.nav_camera -> {
@@ -86,6 +89,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //
 //            }
         }
+
+
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
