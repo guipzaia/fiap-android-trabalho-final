@@ -8,12 +8,16 @@ import retrofit2.http.*
 interface CustomerApi {
 
     @POST("/v1/customers")
-    fun create(@Header("Authorization") token: String, @Body customer: Customer): Call<Customer>
+    fun create(@Header("Authorization") token: String? = null, @Body customer: Customer): Call<Customer>
 
-    @POST("/v1/customers")
-    fun update(@Header("Authorization") token: String, @Body customer: Customer): Call<Customer>
+    @POST("/v1/customers/{uuid}")
+    fun update(@Header("Authorization") token: String? = null, @Path("uuid") uuid: String? = null, @Body customer: Customer): Call<Customer>
+
+    @GET("/v1/customers")
+    fun list(@Header("Authorization") token: String? = null): Call<CustomersReponse>
+
 
     @GET("/v1/customers/{uuid}")
-    fun list(@Header("Authorization") token: String, @Path("uuid") uuid: String): Call<CustomersReponse>
+    fun load(@Header("Authorization") token: String? = null, @Path("uuid") uuid: String? = null): Call<CustomersReponse>
 
 }

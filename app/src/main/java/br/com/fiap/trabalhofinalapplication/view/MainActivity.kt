@@ -1,5 +1,6 @@
 package br.com.fiap.trabalhofinalapplication.view
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -65,9 +66,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
 
             R.id.nav_user_add -> {
+
                 var fragment = supportFragmentManager.beginTransaction()
-                fragment.replace(R.id.frameLayout, UserAddFragment())
+                fragment.replace(R.id.frameLayout, UserListFragment())
                 fragment.commit()
+
+//                var fragment = supportFragmentManager.beginTransaction()
+//                fragment.replace(R.id.frameLayout, UserAddFragment())
+//                fragment.commit()
             }
 
 //            R.id.nav_camera -> {

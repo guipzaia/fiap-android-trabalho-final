@@ -1,7 +1,7 @@
 package br.com.fiap.trabalhofinalapplication.evaluation.contracts
 
 data class Sort(
-    val sorted: Boolean,
-    val unsorted: Boolean,
-    val empty: Boolean
+    val sorted: Boolean? = null,
+    val unsorted: Boolean? = null,
+    val empty: Boolean? = null
 )

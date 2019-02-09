@@ -4,13 +4,13 @@ import br.com.fiap.trabalhofinalapplication.evaluation.contracts.Customer
 import br.com.fiap.trabalhofinalapplication.evaluation.contracts.Sort
 
 data class CustomersReponse(
-    val content: List<Customer>,
-    val totalPages: Long,
-    val totalElements: Long,
-    val last: Long,
-    val first: Long,
-    val sort: Sort,
-    val numberOfElements: Long,
-    val size: Long,
-    val number: Long,
-    val empty: Boolean)
+    val content: List<Customer>? = null,
+    val totalPages: Int = 0,
+    val totalElements: Int = 0,
+    val last: Boolean? = null,
+    val first: Boolean? = null,
+    val sort: Sort? = null,
+    val numberOfElements: Int = 0,
+    val size: Int = 0,
+    val number: Int = 0,
+    val empty: Boolean? = null)

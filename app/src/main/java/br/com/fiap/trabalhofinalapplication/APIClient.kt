@@ -4,6 +4,9 @@ import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import okhttp3.logging.HttpLoggingInterceptor
+
+
 
 class APIClient {
 
@@ -16,7 +19,11 @@ class APIClient {
         internal val client: Retrofit?
             get() {
 
+                val interceptor = HttpLoggingInterceptor()
+                interceptor.level = HttpLoggingInterceptor.Level.BODY
+
                 val okhttp = OkHttpClient.Builder()
+                    .addInterceptor(interceptor)
                     .addNetworkInterceptor(StethoInterceptor())
                     .build()
 

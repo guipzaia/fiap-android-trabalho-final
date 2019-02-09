@@ -6,12 +6,6 @@
                                                  xmlns:app="http://schemas.android.com/apk/res-auto"
                                                  android:id="@+id/user_add_fragment">
 
-    <TextView
-            android:text="User add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="222dp"
-            tools:layout_editor_absoluteX="163dp" android:id="@+id/testeTextView" android:textSize="24sp"/>
-
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/user_add_float_button"
             android:layout_width="wrap_content"
@@ -19,5 +13,49 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@android:drawable/ic_dialog_email"/>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/firstNameEditText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Nome"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/lastNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="475dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:hint="Sobrenome"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/documentNumberEditText" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:hint="CPF"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/dateOfBirthEditText"
+                android:hint="Data de nascimento" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/documentNumberEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" tools:text="@tools:sample/date/ddmmyy"/>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>

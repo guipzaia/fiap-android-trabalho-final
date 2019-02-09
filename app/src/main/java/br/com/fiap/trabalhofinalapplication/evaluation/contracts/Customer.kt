@@ -5,14 +5,14 @@ import java.util.*
 
 
 data class Customer(
-    val id: String,
-    val documentNumber: String,
-    val firstName: String,
-    val lastName: String,
-    val genre: GenreEnum,
-    val dateOfBirth: Calendar,
-    val contacts: List<Contact>,
-    val adresses: List<Address>,
-    val createdAt: Calendar,
-    val updatedAt: Calendar
+    val id: String? = null,
+    val documentNumber: String? = null,
+    val firstName: String? = null,
+    val lastName: String? = null,
+    val genre: GenreEnum? = null,
+    val dateOfBirth: String? = null,
+    val contacts: List<Contact>? = null,
+    val adresses: List<Address>? = null,
+    val createdAt: String? = null,
+    val updatedAt: String? = null
 )
