@@ -65,35 +65,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
 
+            R.id.nav_admin_add -> {
+
+                var fragment = supportFragmentManager.beginTransaction()
+                fragment.replace(R.id.frameLayout, AdminAddFragment())
+                fragment.commit()
+            }
+
             R.id.nav_user_add -> {
+
+                var fragment = supportFragmentManager.beginTransaction()
+                fragment.replace(R.id.frameLayout, UserAddFragment())
+                fragment.commit()
+            }
+
+            R.id.nav_user_list -> {
 
                 var fragment = supportFragmentManager.beginTransaction()
                 fragment.replace(R.id.frameLayout, UserListFragment())
                 fragment.commit()
-
-//                var fragment = supportFragmentManager.beginTransaction()
-//                fragment.replace(R.id.frameLayout, UserAddFragment())
-//                fragment.commit()
             }
-
-//            R.id.nav_camera -> {
-//                // Handle the camera action
-//            }
-//            R.id.nav_gallery -> {
-//
-//            }
-//            R.id.nav_slideshow -> {
-//
-//            }
-//            R.id.nav_manage -> {
-//
-//            }
-//            R.id.nav_share -> {
-//
-//            }
-//            R.id.nav_send -> {
-//
-//            }
         }
 
 

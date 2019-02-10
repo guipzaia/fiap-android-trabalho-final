@@ -18,6 +18,8 @@ import br.com.fiap.trabalhofinalapplication.evaluation.api.v1.CustomerApi
 import br.com.fiap.trabalhofinalapplication.evaluation.api.v1.OAuthApi
 import br.com.fiap.trabalhofinalapplication.evaluation.contracts.customers.v1.CustomersReponse
 import br.com.fiap.trabalhofinalapplication.evaluation.dao.DataBaseInstance
+import kotlinx.android.synthetic.main.user_add_fragment.*
+import kotlinx.android.synthetic.main.user_add_fragment.view.*
 import kotlinx.android.synthetic.main.user_list_fragment.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -92,8 +94,6 @@ class UserListFragment: Fragment() {
             }
 
         })
-
-
 
         return inflater
     }

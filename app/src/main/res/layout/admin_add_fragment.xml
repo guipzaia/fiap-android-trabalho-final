@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/admin_add_fragment">
+<android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtUsername" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" android:hint="Informe o username"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/edtEmail" android:layout_below="@+id/edtUsername"
+            android:hint="Informe o e-mail" tools:layout_editor_absoluteX="0dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtUsername"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edtPassword01" android:layout_below="@+id/edtEmail"
+            android:hint="Informe a senha" tools:layout_editor_absoluteX="0dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edtPassword02" android:layout_below="@+id/edtPassword01"
+            android:hint="Confirme a senha" tools:layout_editor_absoluteX="0dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword01"/>
+    <Button
+            android:text="Cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btnAddAdmin"
+            android:layout_below="@+id/edtPassword02"
+            android:background="#FF9900"
+            android:textColor="#000" app:layout_constraintHorizontal_bias="1.0"
+            tools:layout_editor_absoluteX="-16dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword02"/>
+</android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>
